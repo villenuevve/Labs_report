@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Звіти з дисципліни</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+<style>
+    body, html {
+        height: 100%; 
+    }
+    body {
+        background-color: rgb(255, 236, 207);
+        font-family: 'Montserrat', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex; 
+        flex-direction: column;
+    }
+    .container {
+        display: flex;
+    }
+    .photo {
+        flex: 1;
+        padding: 10px;
+    }
+    .photo img {
+        width: 350px;
+        height: 210px;
+        overflow: hidden;
+        border-radius: 10%;
+        object-fit: cover;
+        margin-left: 50px;
+    }
+    .content {
+        flex: 2;
+        padding: 10px;
+    }
+    .header1 {
+        font-size: 32px; 
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+    .header2 {
+        font-size: 22px; 
+    }
+    .flex-container {
+        display: flex;
+        background-color: rgb(23, 57, 4);
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .flex-container > div {
+        background-color: #fffcf5;
+        margin: 5px;
+        padding: 20px;
+        font-size: 14px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .flex-container > div:hover {
+        background-color: #61835f;
+    }
+    .new-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: auto; 
+        padding: 20px 10px;
+    }
+    .new-box {
+        flex: 1;
+        background-color: #fffcf5;
+        margin: 5px;
+        padding: 20px;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+    .in-container {
+        display: flex;
+        flex-direction: column; 
+        background-color: rgb(23, 57, 4);
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 20px;
+    }
+    .in-container > div {
+        background-color: #fffcf5;
+        margin: 5px;
+        padding: 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .in-container > div:hover {
+        background-color: #61835f;
+    }
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="photo">
+            <img src="me.png" alt="Me">
+        </div>
+        <div class="content">
+            <div class="header1">Звіти лабораторних робіт з дисципліни "WEB – орієнтовані технології. Основи Frontend та Backend розробок"</div>
+            <div class="header2">Студентки групи ІК-12 Тишкевич Владислави</div>
+        </div>
+    </div>
+    <div class="flex-container">
+        <div class="lab" onclick="showLabContent('Лабораторна робота №1')">Лабораторна робота №1</div>
+        <div class="lab" onclick="showLabContent('Лабораторна робота №2')">Лабораторна робота №2</div>
+        <div class="lab" onclick="showLabContent('Лабораторна робота №3')">Лабораторна робота №3</div>  
+        <div class="lab" onclick="showLabContent('Лабораторна робота №4')">Лабораторна робота №4</div>
+        <div class="lab" onclick="showLabContent('Лабораторна робота №5')">Лабораторна робота №5</div>
+        <div class="lab" onclick="showLabContent('Лабораторна робота №6')">Лабораторна робота №6</div>  
+        <div class="lab" onclick="showLabContent('Лабораторна робота №7')">Лабораторна робота №7</div>
+        <div class="lab" onclick="showLabContent('Лабораторна робота №8')">Лабораторна робота №8</div>
+        <div class="lab" onclick="showLabContent('Лабораторна робота №9')">Лабораторна робота №9</div>  
+    </div>
+    <div class="new-container">
+        <div class="new-box" id="labContent"></div>
+        <div class="new-box" id="newContainer2" style="height: calc(1000px);"></div>
+    </div>
+
+    <script>
+        let lab1Clicked = false;
+        function showLabContent(title) {
+            const newContainer2 = document.getElementById('newContainer2');
+            if (title === 'Опис предметного середовища') {
+            newContainer2.innerHTML = `
+            Тема: Поліклініка.
+            <br> </br>
+            Опис: Веб-додаток для існуючої поліклініки, котра дозволить користувачам отримувати детальну інформацію про лікарів певного сегменту, роки досвіду, освіту; моживість дізнатися про необхідні обстеження кожної галузі та інше.
+            `;} 
+            else if (title === 'Тема Мета Місце розташування лаби номер один'){newContainer2.innerHTML = `
+            Тема: СТРУКТУРА HTML-ДОКУМЕНТА. ВИБІР ПРЕДМЕТНОЇ ГАЛУЗІ. РОБОТА З ПОСИЛАННЯМИ, ТАБЛИЦЯМИ, ЗОБРАЖЕННЯМИ, СПИСКАМИ в HTML-ДОКУМЕНТІ.
+            <br> </br>
+            Мета: Придбати практичні навички роботи  з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.
+            <br> </br>
+            Місце розташування Лабораторної роботи №1: https://github.com/villenuevve/Result-html
+            `;} 
+            else if (title === 'Структура документа'){newContainer2.innerHTML = `
+            HTML (HyperText Markup Language) - це мова розмітки, яка використовується для створення веб-сторінок. Структура HTML документа складається з кількох основних елементів:
+            <br> </br>
+            !DOCTYPE html: Це оголошення типу документа, яке повідомляє браузеру, що документ є HTML5. Зазвичай це перший рядок у файлі HTML.
+            <br> </br>
+            html: Цей елемент є кореневим елементом всього HTML документа. Всі інші елементи мають бути вкладені усередину цього елемента.
+            <br> </br>
+            head: Цей елемент містить метадані документа, такі як заголовок сторінки, посилання на зовнішні таблиці стилів (CSS), скрипти JavaScript, мета-теги та інші.
+            <br> </br>
+            script: Цей елемент використовується для вставки скриптів JavaScript безпосередньо в HTML документ або посилання на зовнішні файли скриптів.
+            <br> </br>
+            body: Цей елемент містить вміст веб-сторінки, який відображається у вікні браузера, включаючи текст, зображення, відео, аудіо, форми та інші елементи.
+            `;}
+            else if (title === 'HTML-код таблиць') {
+            newContainer2.innerHTML = ` HTML надає елемент table для створення таблиць на веб-сторінках. Таблиця складається з рядків (tr), які у свою чергу містять осередки даних (td) або заголовків (th). 
+            <br> </br>
+            <img src="1.png" style="width: 600px; height: 400px;">
+            <br> </br>
+            <img src="2.png" style="width: 450px; height: 400px;">`;} 
+
+            else if (title === 'HTML-код форми') {
+            newContainer2.innerHTML = ` Форми є одним із основних елементів веб-сторінок, які дозволяють користувачам взаємодіяти з веб-сайтом, надсилаючи дані на сервер для обробки. Ось приклад HTML-коду для створення простої форми:
+            <br> </br>
+            <img src="3.png" style="width: 600px; height: 400px;">
+            `;} 
+            else if (title === 'HTML-код зображення') {
+            newContainer2.innerHTML = `HTML дозволяє вставляти зображення на веб-сторінку за допомогою тега <img>
+            <br> </br>
+            <img src="4.png" style="width: 550px; height: 300px;">
+            <br> </br>
+            У цьому прикладі тег <img> використовується для вставки зображення на веб-сторінку. Атрибут src вказує шлях до зображення. В даному випадку, зображення повинно знаходитися в тій самій теки, що і HTML-файл, і мати назву "image.jpg". Атрибут alt використовується для визначення альтернативного тексту, який відображається, якщо зображення не може бути завантажене або якщо користувач використовує програмне забезпечення, яке не підтримує відображення зображень.
+            <br> </br>
+            Ось деякі основні атрибути тега <img>:
+            <br> </br>
+            Src: вказує шлях до зображення. Шлях може бути відносним або абсолютним.
+            <br> </br>
+            Alt: надає альтернативний текст, який буде відображатися в разі неможливості завантаження зображення або для користувачів, які використовують програмне забезпечення, що не підтримує відображення зображень.
+            <br> </br>
+            Width і Height: визначають ширину і висоту зображення, відповідно. Вони можуть бути вказані в пікселях або відсотках.
+            <br> </br>
+            HTML також підтримує використання мапи зображень (<map>) і гео-тегів (<area>), що дозволяє створювати реактивні області на зображенні, які реагують на кліки користувача.
+            `;} 
+            else if (title === 'Висновки') {
+                newContainer2.innerHTML = 'Після виконання Лабораторної роботи №1 я оволоділа практичними навичками роботи  з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Також, я створила шаблон звітного HTML-документа для відображення результатів роботи всіх лабораторних робіт. Зокрема першої на даному етапі, також додатково закріпила свої навички у програмі Figma.';
+            }
+            else if (title === 'Лабораторна робота №1' && !lab1Clicked) {
+                const labContent = document.getElementById('labContent');
+                const newContent = `
+                    <div class="in-container">
+                        <div class="in" onclick="showLabContent('Опис предметного середовища')">Опис предметного середовища</div>
+                        <div class="in" onclick="showLabContent('Тема Мета Місце розташування лаби номер один')">Тема Мета Місце розташування лаби номер один</div>
+                        <div class="in" onclick="showLabContent('Структура документа')">Структура документа</div>  
+                        <div class="in" onclick="showLabContent('HTML-код таблиць')">HTML-код таблиць</div>
+                        <div class="in" onclick="showLabContent('HTML-код форми')">HTML-код форми</div>
+                        <div class="in" onclick="showLabContent('HTML-код зображення')">HTML-код зображення</div>  
+                        <div class="in" onclick="showLabContent('Висновки')">Висновки</div>
+                    </div>
+                `;
+                labContent.innerHTML += newContent;
+                lab1Clicked = true;
+            }
+        }
+    </script>    
+
+</body>
+</html>
