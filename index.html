@@ -126,9 +126,47 @@
 
     <script>
         let lab1Clicked = false;
+        let lab2Clicked = false; 
         function showLabContent(title) {
             const newContainer2 = document.getElementById('newContainer2');
-            if (title === 'Опис предметного середовища') {
+            newContainer2.innerHTML = ''; // Очищення контейнера
+            if (title === 'Лабораторна робота №1') {
+                if (!lab1Clicked) {
+                    const labContent = document.getElementById('labContent');
+                    labContent.innerHTML = `
+                        <div class="in-container">
+                            <div class="in" onclick="showLabContent('Опис предметного середовища')">Опис предметного середовища</div>
+                            <div class="in" onclick="showLabContent('Тема Мета Місце розташування лаби номер один')">Тема Мета Місце розташування лаби номер один</div>
+                            <div class="in" onclick="showLabContent('Структура документа')">Структура документа</div>  
+                            <div class="in" onclick="showLabContent('HTML-код таблиць')">HTML-код таблиць</div>
+                            <div class="in" onclick="showLabContent('HTML-код форми')">HTML-код форми</div>
+                            <div class="in" onclick="showLabContent('HTML-код зображення')">HTML-код зображення</div>  
+                            <div class="in" onclick="showLabContent('Висновки')">Висновки</div>
+                        </div>
+                    `;
+                    lab1Clicked = true;
+                    lab2Clicked = false;
+                }
+            } else if (title === 'Лабораторна робота №2') {
+                if (!lab2Clicked) {
+                    const labContent = document.getElementById('labContent');
+                    labContent.innerHTML = `
+                        <div class="in-container">
+                            <div class="in" onclick="showLabContent('Тема Мета ЛР №2. Місце розташування лаби, звту')">Тема Мета ЛР №2. Місце розташування лаби, звту</div>
+                            <div class="in" onclick="showLabContent('Способи підключення стилів')">Способи підключення стилів</div>  
+                            <div class="in" onclick="showLabContent('Селектори')">Селектори</div>
+                            <div class="in" onclick="showLabContent('Селектори тегу')">Селектори тегу</div>
+                            <div class="in" onclick="showLabContent('Селектори класу')">Селектори класу</div>  
+                            <div class="in" onclick="showLabContent('Селектори ідентифікаторів')">Селектори ідентифікаторів</div>  
+                            <div class="in" onclick="showLabContent('Інші селектори')">Інші селектори</div>  
+                            <div class="in" onclick="showLabContent('CSS шрифти, текст, таблиці, фон, списки, просунутий')">CSS шрифти, текст, таблиці, фон, списки, просунутий</div>  
+                            <div class="in" onclick="showLabContent('Висновки 2')">Висновки 2</div>
+                        </div>
+                    `;
+                    lab2Clicked = true;
+                    lab1Clicked = false;
+                }
+            } else if (title === 'Опис предметного середовища') {
             newContainer2.innerHTML = `
             Тема: Поліклініка.
             <br> </br>
@@ -139,7 +177,8 @@
             <br> </br>
             Мета: Придбати практичні навички роботи  з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.
             <br> </br>
-            Місце розташування Лабораторної роботи №1: https://github.com/villenuevve/Result-html
+            Місце розташування Лабораторної роботи №1:
+            <link>:https://github.com/villenuevve/Result-html</link>
             `;} 
             else if (title === 'Структура документа'){newContainer2.innerHTML = `
             HTML (HyperText Markup Language) - це мова розмітки, яка використовується для створення веб-сторінок. Структура HTML документа складається з кількох основних елементів:
@@ -157,19 +196,17 @@
             else if (title === 'HTML-код таблиць') {
             newContainer2.innerHTML = ` HTML надає елемент table для створення таблиць на веб-сторінках. Таблиця складається з рядків (tr), які у свою чергу містять осередки даних (td) або заголовків (th). 
             <br> </br>
-            <img src="1.png" style="width: 600px; height: 400px;">
-            <br> </br>
-            <img src="2.png" style="width: 450px; height: 400px;">`;} 
+            <img src="1.png" style="width: 400px; height: 400px;">`;} 
 
             else if (title === 'HTML-код форми') {
             newContainer2.innerHTML = ` Форми є одним із основних елементів веб-сторінок, які дозволяють користувачам взаємодіяти з веб-сайтом, надсилаючи дані на сервер для обробки. Ось приклад HTML-коду для створення простої форми:
             <br> </br>
-            <img src="3.png" style="width: 600px; height: 400px;">
+            <img src="3.png" style="width: 600px; height: 300px;">
             `;} 
             else if (title === 'HTML-код зображення') {
             newContainer2.innerHTML = `HTML дозволяє вставляти зображення на веб-сторінку за допомогою тега <img>
             <br> </br>
-            <img src="4.png" style="width: 550px; height: 300px;">
+            <img src="4.png" style="width: 500px; height: 150px;">
             <br> </br>
             У цьому прикладі тег <img> використовується для вставки зображення на веб-сторінку. Атрибут src вказує шлях до зображення. В даному випадку, зображення повинно знаходитися в тій самій теки, що і HTML-файл, і мати назву "image.jpg". Атрибут alt використовується для визначення альтернативного тексту, який відображається, якщо зображення не може бути завантажене або якщо користувач використовує програмне забезпечення, яке не підтримує відображення зображень.
             <br> </br>
@@ -185,22 +222,6 @@
             `;} 
             else if (title === 'Висновки') {
                 newContainer2.innerHTML = 'Після виконання Лабораторної роботи №1 я оволоділа практичними навичками роботи  з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Також, я створила шаблон звітного HTML-документа для відображення результатів роботи всіх лабораторних робіт. Зокрема першої на даному етапі, також додатково закріпила свої навички у програмі Figma.';
-            }
-            else if (title === 'Лабораторна робота №1' && !lab1Clicked) {
-                const labContent = document.getElementById('labContent');
-                const newContent = `
-                    <div class="in-container">
-                        <div class="in" onclick="showLabContent('Опис предметного середовища')">Опис предметного середовища</div>
-                        <div class="in" onclick="showLabContent('Тема Мета Місце розташування лаби номер один')">Тема Мета Місце розташування лаби номер один</div>
-                        <div class="in" onclick="showLabContent('Структура документа')">Структура документа</div>  
-                        <div class="in" onclick="showLabContent('HTML-код таблиць')">HTML-код таблиць</div>
-                        <div class="in" onclick="showLabContent('HTML-код форми')">HTML-код форми</div>
-                        <div class="in" onclick="showLabContent('HTML-код зображення')">HTML-код зображення</div>  
-                        <div class="in" onclick="showLabContent('Висновки')">Висновки</div>
-                    </div>
-                `;
-                labContent.innerHTML += newContent;
-                lab1Clicked = true;
             }
         }
     </script>    
