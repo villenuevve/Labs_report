@@ -152,7 +152,7 @@
                     const labContent = document.getElementById('labContent');
                     labContent.innerHTML = `
                         <div class="in-container">
-                            <div class="in" onclick="showLabContent('Тема Мета ЛР №2. Місце розташування лаби, звту')">Тема Мета ЛР №2. Місце розташування лаби, звту</div>
+                            <div class="in" onclick="showLabContent('Тема Мета ЛР №2. Місце розташування лаби, звіту')">Тема Мета ЛР №2. Місце розташування лаби, звіту</div>
                             <div class="in" onclick="showLabContent('Способи підключення стилів')">Способи підключення стилів</div>  
                             <div class="in" onclick="showLabContent('Селектори')">Селектори</div>
                             <div class="in" onclick="showLabContent('Селектори тегу')">Селектори тегу</div>
@@ -178,7 +178,7 @@
             Мета: Придбати практичні навички роботи  з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Створити шаблон звітного HTML-документом для відображення результатів роботи всіх лабораторних робіт.
             <br> </br>
             Місце розташування Лабораторної роботи №1:
-            <link>:https://github.com/villenuevve/Result-html</link>
+            <a href=:https://github.com/villenuevve/Result-html>https://github.com/villenuevve/Result-html</a>
             `;} 
             else if (title === 'Структура документа'){newContainer2.innerHTML = `
             HTML (HyperText Markup Language) - це мова розмітки, яка використовується для створення веб-сторінок. Структура HTML документа складається з кількох основних елементів:
@@ -222,6 +222,82 @@
             `;} 
             else if (title === 'Висновки') {
                 newContainer2.innerHTML = 'Після виконання Лабораторної роботи №1 я оволоділа практичними навичками роботи  з HTML-документом, таблицями, зображеннями, посиланнями, списками, формами. Також, я створила шаблон звітного HTML-документа для відображення результатів роботи всіх лабораторних робіт. Зокрема першої на даному етапі, також додатково закріпила свої навички у програмі Figma.';
+            }
+            else if (title === 'Тема Мета ЛР №2. Місце розташування лаби, звіту'){newContainer2.innerHTML = `
+            Тема: КАСКАДНІ ТАБЛИЦІ СТИЛІВ. СЕЛЕКТОРИ .ІДЕНТИФІКАТОРИ. СТИЛЬОВЕ ОФОРМЛЕННЯ ТЕКСТОВИХ ЕЛЕМЕНТІВ В HTML-ДОКУМЕНТАХ.
+            <br> </br>
+            Мета: Придбати практичні навички роботи з селекторами, ідентифікаторами, списками, різноманітними властивостями кольору і фону, зовнішними та внутрішними відступами, плаваючими елементами, оформленням текстових елементів.
+            <br> </br>
+            Місце розташування Лабораторної роботи №2:
+            <a href="https://github.com/villenuevve/Lab-2">https://github.com/villenuevve/Lab-2</a> 
+            <br></br>
+            Місце розташування звіту:
+            <a href="https://github.com/villenuevve/Labs_report">https://github.com/villenuevve/Labs_report</a>
+            `;} 
+            else if (title === 'Способи підключення стилів'){newContainer2.innerHTML = `
+            1) Використання внутрішнього стилю (Internal CSS): Можна вкласти CSS правила безпосередньо всередині тегу style у розділі head HTML документу. Наприклад:
+            <img src="5.png" style="width: 550px; height: 200px;">
+            <br> </br>
+            2) Підключення зовнішнього файла стилів (External CSS):Можна зберегти CSS правила у окремому файлі з розширенням .css, а потім підключити цей файл до HTML документу за допомогою тегу link. Наприклад: Вміст файлу index.html:
+            <img src="6.png" style="width: 550px; height: 200px;">
+            <br> </br>
+            3) Використання inline стилів: Можна застосовувати стилі безпосередньо до окремих HTML елементів, використовуючи атрибут style. Наприклад:
+            <img src="7.png" style="width: 400px; height: 200px;">
+            4) CSS-frameworks: Можна використовувати готові фреймворки, щоб швидко встановлювати стиль на ваш сайт. Наприклад, Bootstrap, Bulma, Foundation
+            `;} 
+            else if (title === 'Селектори'){newContainer2.innerHTML = `
+            <ul>
+                <li>Селектори - це такі патерни, які використовуються у CSS для вибору елементів HTML, до яких будуть застосовані стилі. CSS селектори дозволяють точно вказати, які елементи на сторінці потрібно стилізувати.</li>
+                <li>Види селекторів:</li>
+                    <ul>
+                    <li>Селектори тегу</li>
+                    <li>Селектори класу</li>
+                    <li>Селектори ідентифікаторів</li>
+                    <li>Додаткові селектори</li>
+                </ul>
+            </ul>`;}
+            else if (title === 'Селектори тегу'){newContainer2.innerHTML = `
+            <img src="tag.png" style="width: 500px; height: 150px;">
+            <img src="tag1.png" style="width: 750px; height: 150px;">
+            <img src="tag2.png" style="width: 250px; height: 200px;">
+            `;} 
+            else if (title === 'Селектори класу'){newContainer2.innerHTML = `
+            <img src="class.png" style="width: 400px; height: 200px;">
+            <img src="class1.png" style="width: 550px; height: 200px;">
+            <img src="class2.png" style="width: 400px; height: 200px;">
+            `;}
+            else if (title === 'Селектори ідентифікаторів'){newContainer2.innerHTML = `
+            <img src="iden.png" style="width: 600px; height: 400px;">
+            `;}
+            else if (title === 'Інші селектори'){newContainer2.innerHTML = `
+            Універсальний селектор
+            <img src="uni1.png" style="width: 400px; height: 100px;"><br> </br>
+            Псевдокласи
+            <img src="pse.png" style="width: 550px; height: 100px;"><br> </br>
+            Контекстні селектори
+            <img src="context.png" style="width: 400px; height: 200px;"><br> </br>
+            Селектори атрибутів
+            <img src="atrib.png" style="width: 550px; height: 20px;"><br> </br>
+            Потомковий селектор
+            <img src="potom.png" style="width: 400px; height: 150px;">
+            `;}
+            else if (title === 'CSS шрифти, текст, таблиці, фон, списки, просунутий'){newContainer2.innerHTML = `
+            Шрифти 
+            <img src="font.png" style="width: 600px; height: 100px;">
+            <img src="font1.png" style="width: 400px; height: 70px;"><br> </br>
+            Текст <br> 
+            <img src="text.png" style="width: 550px; height: 100px;"> <br> </br>
+            Таблиці <br> 
+            <img src="tb.png" style="width: 400px; height:100px;"><br> </br>
+            Фон<br> 
+            <img src="back.png" style="width: 500px; height: 100px;"><br> </br>
+            Списки <br> 
+            <img src="list.png" style="width: 400px; height: 100px;"><br> </br>
+            Просунутий CSS <br> 
+            <img src="pros.png" style="width: 400px; height: 100px;">
+            `;}
+            else if (title === 'Висновки 2') {
+                newContainer2.innerHTML = 'Після виконання Лабораторної роботи №2 я оволоділа практичними навичками роботи з селекторами, ідентифікаторами, списками, різноманітними властивостями кольору і фону, зовнішними та внутрішними відступами, плаваючими елементами, оформленням текстових елементів.';
             }
         }
     </script>    
