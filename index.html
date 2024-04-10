@@ -126,6 +126,7 @@
     <script>
         let lab1Clicked = false;
         let lab2Clicked = false; 
+        let lab3Clicked = false;
         function showLabContent(title) {
             const newContainer2 = document.getElementById('newContainer2');
             newContainer2.innerHTML = ''; // Очищення контейнера
@@ -145,6 +146,7 @@
                     `;
                     lab1Clicked = true;
                     lab2Clicked = false;
+                    lab3Clicked = false;
                 }
             } else if (title === 'Лабораторна робота №2') {
                 if (!lab2Clicked) {
@@ -164,6 +166,28 @@
                     `;
                     lab2Clicked = true;
                     lab1Clicked = false;
+                    lab3Clicked = false;
+                }
+            }else if (title === 'Лабораторна робота №3') {
+                if (!lab3Clicked) {
+                    const labContent = document.getElementById('labContent');
+                    labContent.innerHTML = `
+                        <div class="in-container">
+                            <div class="in" onclick="showLabContent('Тема Мета ЛР №3. Місце розташування лаби, звіту')">Тема Мета ЛР №3. Місце розташування лаби, звіту</div>
+                            <div class="in" onclick="showLabContent('Завдання №1')">Завдання №1</div>  
+                            <div class="in" onclick="showLabContent('Завдання №2. Фіксована таблична верстка')">Завдання №2. Фіксована таблична верстка</div>
+                            <div class="in" onclick="showLabContent('Завдання №2. Гумова таблична верстка')">Завдання №2. Гумова таблична верстка</div>  
+                            <div class="in" onclick="showLabContent('Завдання №2. Фіксована блокова верстка')">Завдання №2. Фіксована блокова верстка</div>  
+                            <div class="in" onclick="showLabContent('Завдання №2. Гумова блокова верстка')">Завдання №2. Гумова блокова верстка</div>  
+                            <div class="in" onclick="showLabContent('Завдання №3 (Flexbox). Зовнішній вигляд сторінки')">Завдання №3 (Flexbox). Зовнішній вигляд сторінки</div>
+                            <div class="in" onclick="showLabContent('Завдання №3 (Flexbox). HTML code')">Завдання №3 (Flexbox). HTML code</div>
+                            <div class="in" onclick="showLabContent('Завдання №3 (Flexbox). CSS code')">Завдання №3 (Flexbox). CSS code</div>
+                            <div class="in" onclick="showLabContent('Висновки 3')">Висновки 3</div>
+                        </div>
+                    `;
+                    lab2Clicked = false;
+                    lab1Clicked = false;
+                    lab3Clicked = true;
                 }
             } else if (title === 'Опис предметного середовища') {
             newContainer2.innerHTML = `
@@ -298,7 +322,7 @@
             Текст <br> 
             <img src="text.png" style="width: 550px; height: 100px;"> <br> </br>
             Таблиці <br> 
-            <img src="tb.png" style="width: 400px; height:100px;"><br> </br>
+            <img src="tb.png" style="width: 400px; height:200px;"><br> </br>
             Фон<br> 
             <img src="back.png" style="width: 500px; height: 100px;"><br> </br>
             Списки <br> 
@@ -309,8 +333,91 @@
             else if (title === 'Висновки 2') {
                 newContainer2.innerHTML = 'Після виконання Лабораторної роботи №2 я оволоділа практичними навичками роботи з селекторами, ідентифікаторами, списками, різноманітними властивостями кольору і фону, зовнішними та внутрішними відступами, плаваючими елементами, оформленням текстових елементів.';
             }
+            else if (title === 'Тема Мета ЛР №3. Місце розташування лаби, звіту'){newContainer2.innerHTML = `
+            Тема:
+            ВЕРСТКА HTML-ДОКУМЕНТУ. БЛОКОВА ВЕРСТКА.  ВЕРСТКА ЗАСОБАМИ CSS та FLEXBOX.
+            <br></br>
+            Мета:
+            <br></br>
+            Придбати практичні навички роботи  верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок. 
+            Придбати практичні навички роботи  верстки сторінок засобами CSS та FLEXBOX
+            <br></br>
+            Місце розташування лаби:
+            <br></br>
+            <a href="https://github.com/villenuevve/Lab-3.1">https://github.com/villenuevve/Lab-3.1</a> 
+            <br></br>
+            <a href="https://github.com/villenuevve/Lab-3.2.1">https://github.com/villenuevve/Lab-3.2.1</a> 
+            <br></br>
+            <a href="https://github.com/villenuevve/Lab-3.2.2">https://github.com/villenuevve/Lab-3.2.2</a> 
+            <br></br>
+            <a href="https://github.com/villenuevve/Lab-3.2.3">https://github.com/villenuevve/Lab-3.2.3</a> 
+            <br></br>
+            <a href="https://github.com/villenuevve/Lab-3.2.4">https://github.com/villenuevve/Lab-3.2.4</a>
+            <br></br>
+            <a href="https://github.com/villenuevve/Lab-3.3">https://github.com/villenuevve/Lab-3.3</a> 
+            <br></br>
+            Місце розташування звіту:
+            <a href="https://github.com/villenuevve/Labs_report">https://github.com/villenuevve/Labs_report</a> 
+            <br></br>
+            `;}
+            else if (title === 'Завдання №1'){newContainer2.innerHTML = `
+            Фрагмент коду HTML <br>
+            <img src="3.1 HTML.png" style="width: 350px; height: 350px;">
+            <br>Фрагмент коду CSS <br>
+            <img src="3.1 CSS.png" style="width: 350px; height:350px;"><br> </br>
+            Фрагмент результату <br> 
+            <img src="3.1 res.png" style="width: 400px; height: 200px;"> <br> </br>
+            `;}
+            else if (title === 'Завдання №2. Фіксована таблична верстка'){newContainer2.innerHTML = `
+            Фрагмент коду HTML <br>
+            <img src="3.2.1 HTML.png" style="width: 350px; height: 250px;">
+            <br>Фрагмент коду CSS <br>
+            <img src="3.2.1 CSS.png" style="width: 200px; height:250px;"><br> </br>
+            Фрагмент результату <br> 
+            <img src="3.2.1 res.png" style="width: 400px; height: 400px;"> <br> </br>
+            `;}
+            else if (title === 'Завдання №2. Гумова таблична верстка'){newContainer2.innerHTML = `
+            Фрагмент коду HTML <br>
+            <img src="3.2.2 HTML.png" style="width: 350px; height: 250px;">
+            <br>Фрагмент коду CSS <br>
+            <img src="3.2.2 CSS.png" style="width: 200px; height:250px;"><br> </br>
+            Фрагмент результату <br> 
+            <img src="3.2.2 res.png" style="width: 400px; height: 400px;"> <br> </br>
+            `;}
+            else if (title === 'Завдання №2. Фіксована блокова верстка'){newContainer2.innerHTML = `
+            Фрагмент коду HTML <br>
+            <img src="3.2.3 HTML.png" style="width: 350px; height: 250px;">
+            <br>Фрагмент коду CSS <br>
+            <img src="3.2.3 CSS.png" style="width: 200px; height:250px;"><br> </br>
+            Фрагмент результату <br> 
+            <img src="3.2.3 res.png" style="width: 400px; height: 400px;"> <br> </br>
+            `;}
+            else if (title === 'Завдання №2. Гумова блокова верстка'){newContainer2.innerHTML = `
+            Фрагмент коду HTML <br>
+            <img src="3.2.4 HTML.png" style="width: 350px; height: 250px;">
+            <br>Фрагмент коду CSS <br>
+            <img src="3.2.4 CSS.png" style="width: 200px; height:250px;"><br> </br>
+            Фрагмент результату <br> 
+            <img src="3.2.4 res.png" style="width: 400px; height: 400px;"> <br> </br>
+            `;}
+            else if (title === 'Завдання №3 (Flexbox). Зовнішній вигляд сторінки'){newContainer2.innerHTML = `
+            Фрагменти зовнішнього вигляду сторінки <br></br>
+            <img src="3.3 1.png" style="width: 500px; height: 250px;">
+            <img src="3.3 2.png" style="width: 500px; height: 250px;">
+            `;}
+            else if (title === 'Завдання №3 (Flexbox). HTML code'){newContainer2.innerHTML = `
+            Фрагменти коду HTML <br>
+            <img src="3.3 HTML.png" style="width: 550px; height: 400px;">
+            `;}
+            else if (title === 'Завдання №3 (Flexbox). CSS code'){newContainer2.innerHTML = `
+            Фрагмент коду CSS <br>
+            <img src="3.3 CSS.png" style="width: 300px; height:350px;"><br> </br>
+            `;}
+            else if (title === 'Висновки 3') {
+                newContainer2.innerHTML = 'Після виконання Лабораторної роботи №3 я оволоділа практичними навичками роботи верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок та Flexbox';
+            }
         }
+        
     </script>    
-
 </body>
 </html>
