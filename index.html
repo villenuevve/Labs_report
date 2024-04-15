@@ -127,6 +127,7 @@
         let lab1Clicked = false;
         let lab2Clicked = false; 
         let lab3Clicked = false;
+        let lab4Clicked = false;
         function showLabContent(title) {
             const newContainer2 = document.getElementById('newContainer2');
             newContainer2.innerHTML = ''; // Очищення контейнера
@@ -147,6 +148,7 @@
                     lab1Clicked = true;
                     lab2Clicked = false;
                     lab3Clicked = false;
+                    lab4Clicked = false;
                 }
             } else if (title === 'Лабораторна робота №2') {
                 if (!lab2Clicked) {
@@ -167,6 +169,7 @@
                     lab2Clicked = true;
                     lab1Clicked = false;
                     lab3Clicked = false;
+                    lab4Clicked = false;
                 }
             }else if (title === 'Лабораторна робота №3') {
                 if (!lab3Clicked) {
@@ -188,8 +191,30 @@
                     lab2Clicked = false;
                     lab1Clicked = false;
                     lab3Clicked = true;
+                    lab4Clicked = false;
                 }
-            } else if (title === 'Опис предметного середовища') {
+            } 
+            else if (title === 'Лабораторна робота №4') {
+                if (!lab3Clicked) {
+                    const labContent = document.getElementById('labContent');
+                    labContent.innerHTML = `
+                        <div class="in-container">
+                            <div class="in" onclick="showLabContent('Тема Мета ЛР №4. Місце розташування лаби, звіту')">Тема Мета ЛР №4. Місце розташування лаби, звіту</div>
+                            <div class="in" onclick="showLabContent('Медіа-запити')">Медіа-запити</div>  
+                            <div class="in" onclick="showLabContent('Адаптивна верстка')">Адаптивна верстка</div>
+                            <div class="in" onclick="showLabContent('Десктопна версія')">Десктопна версія</div>  
+                            <div class="in" onclick="showLabContent('Планшетна версія')">Планшетна версія</div>  
+                            <div class="in" onclick="showLabContent('Мобільна версія')">Мобільна версія</div>  
+                            <div class="in" onclick="showLabContent('Висновки 4')">Висновки 4</div>
+                        </div>
+                    `;
+                    lab2Clicked = false;
+                    lab1Clicked = false;
+                    lab3Clicked = false;
+                    lab4Clicked = true;
+                }
+            } 
+            else if (title === 'Опис предметного середовища') {
             newContainer2.innerHTML = `
             Тема: Поліклініка.
             <br> </br>
@@ -415,6 +440,51 @@
             `;}
             else if (title === 'Висновки 3') {
                 newContainer2.innerHTML = 'Після виконання Лабораторної роботи №3 я оволоділа практичними навичками роботи верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок та Flexbox';
+            }
+            else if (title === 'Тема Мета ЛР №4. Місце розташування лаби, звіту'){newContainer2.innerHTML = `
+            Тема: АДАПТИВНА ВЕРСТКА. МЕДІА-ЗАПИТИ. МЕТАТЕГ VIEWPORT. СТРАТЕГІЯ MOBILE FIRST. <br> </br>
+            Мета: Адаптивна верстка. Медіа-запити. Медіа-типи. Медіа-функції.Метатег viewport. Інструменти розробника. Стратегія Mobile First. <br> </br>
+            Місце розташування Лабораторної роботи №4:
+            <a href="https://github.com/villenuevve/Lab-4">https://github.com/villenuevve/Lab-4</a> <br></br>
+            Жива сторінка лабораторної роботи №4:
+            <a href="https://github.com/villenuevve.github.io/Lab-4/">https://github.com/villenuevve.github.io/Lab-4/</a><br></br>
+            Місце розташування звіту:
+            <a href="https://github.com/villenuevve/Labs_report">https://github.com/villenuevve/Labs_report</a><br></br>
+            Жива сторінка звіту:
+            <a href="https://github.com/villenuevve.github.io/Labs_report/">https://github.com/villenuevve.github.io/Labs_report/</a>
+            `;} 
+            else if (title === 'Медіа-запити'){newContainer2.innerHTML = `
+            Медіа запити CSS - це інструмент веб-дизайну, що дозволяє адаптувати вигляд сторінки в залежності від розміру екрана, пристрою та інших характеристик відображення. Вони використовуються для створення відзивчивих веб-сайтів, які автоматично пристосовуються до різних умов відображення, таких як ширина екрана, орієнтація (горизонтальна або вертикальна), роздільна здатність тощо. <br></br>
+            <img src="media.png" style="width: 550px; height: 100px;"><br></br>
+            У цьому прикладі @media screen and (max-width: 480px) означає, що ці стилі будуть застосовуватися лише для екранів шириною 480 пікселів або менше. <br></br>
+            Медіа запити можуть включати різні типи умов, такі як min-width та max-width для оголошення стилів в залежності від ширини вікна. Orientation: portrait чи orientation: landscape для визначення орієнтації пристрою. Resolution, aspect-ratio, color та багато інших умов, які дозволяють ще більш точно налаштовувати дизайн під конкретні характеристики пристроїв користувачів.
+            `;}
+            else if (title === 'Адаптивна верстка') {
+                newContainer2.innerHTML = 'Адаптивна верстка — підхід у веб-дизайні, який дозволяє створювати веб-сайти, що ефективно працюють і виглядають добре на різноманітних пристроях, від мобільних телефонів до настільних компютерів. Основна ідея адаптивної верстки полягає в тому, що дизайн веб-сторінки "відгукується" на різні умови перегляду, зокрема на розміри і роздільну здатність екрану пристрою, на якому він переглядається.';
+            }
+            else if (title === 'Десктопна версія'){newContainer2.innerHTML = `
+            Десктопна версія сайта — це версія веб-сайту, яка оптимізована для перегляду на настільних комп'ютерах та ноутбуках. Вона зазвичай має більший інтерфейс та розширені функціональні можливості порівняно з мобільною версією, оскільки настільні комп'ютери мають більші екрани і більшу потужність обробки. <br></br>
+            Фрагмент коду CSS <br>
+            <img src="deskcode.png" style="width: 250px; height: 300px;"><br></br>
+            Результат:<br></br>
+            <img src="desktop.png" style="width: 550px; height: 300px;"><br></br>    
+            `;}
+            else if (title === 'Планшетна версія'){newContainer2.innerHTML = `
+            Планшетна версія сайту — це оптимізована версія веб-сайту, спроектована для перегляду та використання на планшетних комп'ютерах. Цей тип дизайну займає проміжне місце між мобільними та десктопними версіями, беручи до уваги унікальні особливості планшетів, такі як розмір екрану та методи введення (сенсорний екран)
+            Фрагмент коду CSS <br>
+            <img src="tabletcode.png" style="width: 450px; height: 300px;"><br></br>
+            Результат:<br></br>
+            <img src="tablet.png" style="width: 550px; height: 300px;"><br></br>    
+            `;}
+            else if (title === 'Мобільна версія'){newContainer2.innerHTML = `
+            Мобільна версія сайту — спеціально адаптована версія веб-сайту для використання на смартфонах та інших мобільних пристроях. Вона враховує особливості маленьких екранів, меншої потужності апаратного забезпечення, а також специфіку взаємодії через сенсорний екран
+            Фрагмент коду CSS <br>
+            <img src="mobilecode.png" style="width: 650px; height: 250px;"><br></br>
+            Результат:<br></br>
+            <img src="mobile.png" style="width: 250px; height: 350px;"><br></br>    
+            `;}
+            else if (title === 'Висновки 4') {
+                newContainer2.innerHTML = 'У рамках лабораторної роботи №4 я зосередила увагу на адаптивній верстці веб-сайтів, використовуючи медіа-запити, медіа-типи, медіа-функції та метатег viewport. Ці інструменти дозволили нам створювати дизайн, який адаптується до різних пристроїв, від мобільних телефонів до десктопів, забезпечуючи оптимальний досвід для кожного користувача.';
             }
         }
         
