@@ -9,6 +9,7 @@
     body, html {
         height: 100%; 
     }
+    
     body {
         background-color: rgb(255, 236, 207);
         font-family: 'Montserrat', sans-serif;
@@ -128,6 +129,7 @@
         let lab2Clicked = false; 
         let lab3Clicked = false;
         let lab4Clicked = false;
+        let lab5Clicked = false;
         function showLabContent(title) {
             const newContainer2 = document.getElementById('newContainer2');
             newContainer2.innerHTML = ''; // Очищення контейнера
@@ -149,6 +151,7 @@
                     lab2Clicked = false;
                     lab3Clicked = false;
                     lab4Clicked = false;
+                    lab5Clicked = false;
                 }
             } else if (title === 'Лабораторна робота №2') {
                 if (!lab2Clicked) {
@@ -170,6 +173,7 @@
                     lab1Clicked = false;
                     lab3Clicked = false;
                     lab4Clicked = false;
+                    lab5Clicked = false;
                 }
             }else if (title === 'Лабораторна робота №3') {
                 if (!lab3Clicked) {
@@ -192,6 +196,7 @@
                     lab1Clicked = false;
                     lab3Clicked = true;
                     lab4Clicked = false;
+                    lab5Clicked = false;
                 }
             } 
             else if (title === 'Лабораторна робота №4') {
@@ -212,6 +217,30 @@
                     lab1Clicked = false;
                     lab3Clicked = false;
                     lab4Clicked = true;
+                    lab5Clicked = false;
+                }
+            } 
+            else if (title === 'Лабораторна робота №5') {
+                if (!lab3Clicked) {
+                    const labContent = document.getElementById('labContent');
+                    labContent.innerHTML = `
+                        <div class="in-container">
+                            <div class="in" onclick="showLabContent('Тема Мета ЛР №5. Місце розташування лаби, звіту')">Тема Мета ЛР №5. Місце розташування лаби, звіту</div>
+                            <div class="in" onclick="showLabContent('Способи функціонального застосування JavaScript')">Способи функціонального застосування JavaScript</div>  
+                            <div class="in" onclick="showLabContent('Схема URL')">Схема URL</div>
+                            <div class="in" onclick="showLabContent('Обробник подій')">Обробник подій</div>  
+                            <div class="in" onclick="showLabContent('Підстановка entity')">Підстановка entity</div>  
+                            <div class="in" onclick="showLabContent('Вставка тег script')">Вставка тег script</div>  
+                            <div class="in" onclick="showLabContent('Завдання 1 з масивом')">Завдання 1 з масивом</div>  
+                            <div class="in" onclick="showLabContent('Завдання 2')">Завдання 2</div>  
+                            <div class="in" onclick="showLabContent('Висновки 5')">Висновки 5</div>
+                        </div>
+                    `;
+                    lab2Clicked = false;
+                    lab1Clicked = false;
+                    lab3Clicked = false;
+                    lab4Clicked = false;
+                    lab5Clicked = true;
                 }
             } 
             else if (title === 'Опис предметного середовища') {
@@ -485,6 +514,88 @@
             `;}
             else if (title === 'Висновки 4') {
                 newContainer2.innerHTML = 'У рамках лабораторної роботи №4 я зосередила увагу на адаптивній верстці веб-сайтів, використовуючи медіа-запити, медіа-типи, медіа-функції та метатег viewport. Ці інструменти дозволили нам створювати дизайн, який адаптується до різних пристроїв, від мобільних телефонів до десктопів, забезпечуючи оптимальний досвід для кожного користувача.';
+            }
+            else if (title === 'Тема Мета ЛР №5. Місце розташування лаби, звіту'){newContainer2.innerHTML = `
+            Тема:ФУНКЦІОНАЛЬНЕ ЗАСТОСУВАННЯ JAVASCRIPT У HTML-ДОКУМЕНТІ. ВИКОРИСТАННЯ МАСИВІВ У JS-СЦЕНАРІЯХ. РЕАЛІЗАЦІЯ ПРОГРАМ ЗАСОВАМИ МОВИ JAVASCRIPT <br> </br>
+            Мета: Придбати практичні навички роботи з масивами у js-сценаріях. Реалізація програм засовами мови JAVASCRIPT <br> </br>
+            Місце розташування Лабораторної роботи №5:
+            <a href="https://github.com/villenuevve/Lab-5">https://github.com/villenuevve/Lab-5</a> <br></br>
+            Жива сторінка лабораторної роботи №5:
+            <a href="https://villenuevve.github.io/Lab-5/">https://villenuevve.github.io/Lab-5/</a><br></br>
+            Місце розташування звіту:
+            <a href="https://github.com/villenuevve/Labs_report">https://github.com/villenuevve/Labs_report</a><br></br>
+            Жива сторінка звіту:
+            <a href="https://github.com/villenuevve.github.io/Labs_report/">https://github.com/villenuevve.github.io/Labs_report/</a>
+            `;} 
+            else if (title === 'Способи функціонального застосування JavaScript'){newContainer2.innerHTML = `
+            JavaScript має широкі можливості функціонального програмування, що означає, що можна використовувати функції як значення, передавати їх у функції, повертати їх з функцій, а також створювати функції, які генерують і повертають інші функції. Ось деякі способи функціонального застосування JavaScript:
+            <br></br>
+            1. Замикання (Closures): Функції в JavaScript мають доступ до змінних, що знаходяться в області видимості свого зовнішнього середовища. Це дозволяє створювати замикання, коли внутрішня функція запам'ятовує змінні з зовнішньої функції, навіть після того, як зовнішня функція завершила роботу.<br></br>
+            2. Функціональні методи масивів: JavaScript масиви мають кілька вбудованих функцій вищих порядків, таких як map(), filter(), reduce() і forEach(), які дозволяють легко маніпулювати елементами масиву.<br></br>
+            3. Рекурсія: Функції в JavaScript можуть викликати самих себе, що дозволяє виконувати рекурсивні алгоритми.<br></br>
+            4. Функціональне програмування з використанням бібліотек: Бібліотеки, такі як Lodash або Ramda, надають додаткові інструменти для функціонального програмування, такі як каррірування, композиція функцій, мемоізація і багато іншого.<br></br>
+            `;}
+
+            else if (title === 'Схема URL'){newContainer2.innerHTML = `
+            Схема URL (Uniform Resource Locator) може бути використана як спосіб функціонального застосування JavaScript через використання об'єкта URL або URLSearchParams, які доступні в браузері та середовищі виконання JavaScript, такому як Node.js. Ось декілька способів, як це може бути використано:<br></br>
+            Розбір параметрів запиту: Можна використовувати об'єкт URLSearchParams, щоб розбирати параметри запиту з URL.<br></br> 
+            <img src="5.1.png" style="width: 550px; height: 100px;"><br></br>
+            Отримання інформації про URL: Об'єкт URL також надає доступ до різних частин URL, таких як протокол, хост, шлях і т. д.<br></br>
+            <img src="5.1.png" style="width: 550px; height: 100px;"><br></br>  
+            Формування URL з параметрами: URLSearchParams дозволяє легко створити URL з параметрами. <br></br> 
+            <img src="5.3.png" style="width: 550px; height: 100px;"><br></br> 
+            `;}
+
+            else if (title === 'Обробник подій'){newContainer2.innerHTML = `
+            Обробник подій в JavaScript - це механізм, який дозволяє вам реагувати на різні події, такі як клік миші, натискання клавіші, завантаження сторінки тощо, викликаючи відповідні функції, які визначаються. Це можна розглядати як спосіб функціонального застосування JavaScript, оскільки використовуються функції для реагування на події. <br></br>
+            Нижче з моєї лабораторної наведено приклад обробника події, який викликається при натисканні на кнопку з класом task1Btn. Коли кнопка клікається, відбувається виконання функції, що передана як аргумент до addEventListener.<br></br>
+            <img src="5.5.png" style="width: 550px; height: 150px;">
+            `;}
+
+            else if (title === 'Підстановка entity'){newContainer2.innerHTML = `
+            Підстановка символьних ентітів - це процес заміни спеціальних символів або символів з певним значенням на їх відповідні символьні ентіті в HTML. Це використовується для того, щоб забезпечити коректне відображення символів, які можуть бути сприйняті браузером як частину HTML-розмітки, та для уникнення конфліктів із синтаксисом HTML.<br></br>
+            Ось деякі з найбільш часто використовуваних символьних ентітів у HTML (в оригіналі без пробілів):<br></br>
+            & amp; - символ "&"<br></br>
+            & lt; - символ "<"<br></br>
+            & gt; - символ ">"<br></br>
+            & quot; - символ подвійної лапки (")<br></br>
+            & apos; - символ апострофа (')<br></br>
+            & copy; - символ копірайту ©<br></br>
+            & reg; - символ зареєстрованого товарного знаку ®<br></br>
+            & nbsp; - нерозривний пробіл<br></br>
+            Використання &amp в моїй лабораторній (не в якості entity підстановки)<br></br>
+            <img src="5.6.png" style="width: 550px; height: 130px;">
+            `;}
+
+            else if (title === 'Вставка тег script'){newContainer2.innerHTML = `
+            Вставка тегу script - це спосіб додавання JavaScript-коду до HTML-сторінки. Коли браузер зустрічає під час обробки HTML-документу цей тег, він виконує вміст цього тегу як JavaScript-код.<br></br>
+            Зовнішнє вставлення (External): Посилання на зовнішні файли JavaScript, використовуючи атрибут src тегу script. <br></br>
+            <img src="5.7.png" style="width: 450px; height: 70px;"><br></br>
+            У цьому випадку браузер завантажує і виконує вміст файлу main.js. Цей підхід зручний для великих програм або для того, щоб використовувати один і той же JavaScript-код на кількох сторінках.
+            `;}
+
+            else if (title === 'Завдання 1 з масивом'){newContainer2.innerHTML = `
+            Варіант 3. Умова: Заданий одновимірний масив А, кількість елементів якого задана користувачем. Побудувати масив В, кожний елемент якого обчислюється за формулою : bі = max*ai де -  max  це максимальний елемент масиву А. Надрукувати вхідний та вихідний масиви.  Виконати сортування вихідного масиву за зменшенням методом вставки<br></br>
+            Kод HTML<br></br>
+            <img src="z1html.png" style="width: 400px; height: 150px;"><br></br>
+            Kод CSS<br></br>
+            <img src="z1css.png" style="width: 250px; height: 250px;"><br></br>  
+            Результат<br></br> 
+            <img src="z1.png" style="width: 250px; height: 300px;"><br></br> 
+            `;}
+
+            else if (title === 'Завдання 2'){newContainer2.innerHTML = `
+            Варіант 3.Умова: Реалізувати калькулятор мовою JavaScript. Обов‘язкові операції: +,-,*,/,%, корінь квадратний, x^y. Кнопки з цифрами та знаками операцій мають бути доступні у інтерфейсі вікна.<br></br>
+            Фрагмент коду HTML<br></br>
+            <img src="z2html.png" style="width: 200px; height: 250px;"><br></br>  
+            Фрагмент коду CSS<br></br> 
+            <img src="z2css.png" style="width: 350px; height: 170px;"><br></br> 
+            Результат<br></br> 
+            <img src="z2.png" style="width: 250px; height: 300px;"><br></br>
+            `;}
+
+            else if (title === 'Висновки 5') {
+                newContainer2.innerHTML = 'У рамках лабораторної роботи №5 я придбала практичні навички роботи з масивами у js-сценаріях. Реалізувала програми засобами мови JAVASCRIPT';
             }
         }
         
