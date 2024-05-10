@@ -133,6 +133,7 @@
         let lab4Clicked = false;
         let lab5Clicked = false;
         let lab51Clicked = false;
+        let lab6Clicked = false;
         function showLabContent(title) {
             const newContainer2 = document.getElementById('newContainer2');
             newContainer2.innerHTML = ''; // Очищення контейнера
@@ -156,6 +157,7 @@
                     lab4Clicked = false;
                     lab5Clicked = false;
                     lab51Clicked = false;
+                    lab6Clicked = false;
                 }
             } else if (title === 'Лабораторна робота №2') {
                 if (!lab2Clicked) {
@@ -179,6 +181,7 @@
                     lab4Clicked = false;
                     lab5Clicked = false;
                     lab51Clicked = false;
+                    lab6Clicked = false;
                 }
             }else if (title === 'Лабораторна робота №3') {
                 if (!lab3Clicked) {
@@ -203,6 +206,7 @@
                     lab4Clicked = false;
                     lab5Clicked = false;
                     lab51Clicked = false;
+                    lab6Clicked = false;
                 }
             } 
             else if (title === 'Лабораторна робота №4') {
@@ -225,6 +229,7 @@
                     lab4Clicked = true;
                     lab5Clicked = false;
                     lab51Clicked = false;
+                    lab6Clicked = false;
                 }
             } 
             else if (title === 'Лабораторна робота №5') {
@@ -249,6 +254,7 @@
                     lab4Clicked = false;
                     lab5Clicked = true;
                     lab51Clicked = false;
+                    lab6Clicked = false;
                 }
             } 
 
@@ -271,8 +277,34 @@
                     lab1Clicked = false;
                     lab3Clicked = false;
                     lab4Clicked = false;
-                    lab5Clicked = true;
+                    lab5Clicked = false;
+                    lab51Clicked = true;
+                    lab6Clicked = false;
+                }
+            } 
+            else if (title === 'Лабораторна робота №6') {
+                if (!lab3Clicked) {
+                    const labContent = document.getElementById('labContent');
+                    labContent.innerHTML = `
+                        <div class="in-container">
+                            <div class="in" onclick="showLabContent('Тема Мета ЛР №6 Місце розташування лаби, звіту')">Тема Мета ЛР №6 Місце розташування лаби, звіту</div>
+                            <div class="in" onclick="showLabContent('Завдання 6.1')">Завдання 6.1</div>  
+                            <div class="in" onclick="showLabContent('Завдання 6.3')">Завдання 6.3</div>  
+                            <div class="in" onclick="showLabContent('Завдання 6.5')">Завдання 6.5</div>  
+                            <div class="in" onclick="showLabContent('Завдання 6.7')">Завдання 6.7</div>  
+                            <div class="in" onclick="showLabContent('Завдання 6.8')">Завдання 6.8</div>  
+                            <div class="in" onclick="showLabContent('Завдання 6.9')">Завдання 6.9</div>  
+                            <div class="in" onclick="showLabContent('Завдання 6.10')">Завдання 6.10</div>  
+                            <div class="in" onclick="showLabContent('Висновки 6')">Висновки 6</div>
+                        </div>
+                    `;
+                    lab2Clicked = false;
+                    lab1Clicked = false;
+                    lab3Clicked = false;
+                    lab4Clicked = false;
+                    lab5Clicked = false;
                     lab51Clicked = false;
+                    lab6Clicked = true;
                 }
             } 
             else if (title === 'Опис предметного середовища') {
@@ -695,12 +727,91 @@
             <img src="res_10.5.1.png" style="width: 300px; height: 50px;"><br></br>
             `;}
 
-
-
-
             else if (title === 'Висновки 5.1') {
                 newContainer2.innerHTML = 'У рамках лабораторної роботи №5.1 я було дослідила ООП-функціонал JS, використання callback та стрілочних функцій. Отримані знання було опрацьовано за допомиги практичних завдань.';
             }
+
+            else if (title === 'Тема Мета ЛР №6 Місце розташування лаби, звіту'){newContainer2.innerHTML = `
+            Тема: КЛАСИ. ОБ'ЄКТНА МОДЕЛЬ ДОКУМЕНТА (DOM). ПОДІЇ. ОБ'ЄКТ ПОДІЇ. ДЕЛЕГУВАННЯ ПОДІЙ. THROTTLE. МОДУЛЬНОСТЬ КОДУ<br> </br>
+            Мета: Придбати практичні навички роботи з об'єктами. Методи об'єкта. Callback. Стрілочні функції. Стрілочні функції як колбеки​. Реалізація програм засовами мови JAVASCRIPT<br> </br>
+            Місце розташування Лабораторної роботи №6:
+            <a href="https://github.com/villenuevve/Lab6">https://github.com/villenuevve/Lab6</a> <br></br>
+            Жива сторінка лабораторної роботи №6:
+            <a href="https://villenuevve.github.io/Lab6/">https://villenuevve.github.io/Lab6/</a><br></br>
+            Місце розташування звіту:
+            <a href="https://github.com/villenuevve/Labs_report">https://github.com/villenuevve/Labs_report</a><br></br>
+            Жива сторінка звіту:
+            <a href="https://github.com/villenuevve.github.io/Labs_report/">https://github.com/villenuevve.github.io/Labs_report/</a>
+            `;} 
+
+            else if (title === 'Завдання 6.1'){newContainer2.innerHTML = `
+            Завдання 6.1<br></br>
+            <img src="task_6.1.png" style="width: 600px; height: 250px;"><br></br>  
+            Код<br></br> 
+            <img src="code_6.1.png" style="width: 400px; height: 100px;"><br></br> 
+            Результат<br></br> 
+            <img src="res_6.1.png" style="width: 300px; height: 50px;"><br></br>
+            `;}
+
+            else if (title === 'Завдання 6.3'){newContainer2.innerHTML = `
+            Завдання 6.3<br></br>
+            <img src="task_6.3.png" style="width: 450px; height: 250px;"><br></br>  
+            Код<br></br> 
+            <img src="code_6.3.png" style="width: 600px; height: 300px;"><br></br> 
+            Результат<br></br> 
+            <img src="res_6.3.png" style="width: 200px; height: 70px;"><br></br>
+            `;}
+
+            else if (title === 'Завдання 6.5'){newContainer2.innerHTML = `
+            Завдання 6.5<br></br>
+            <img src="task_6.5.png" style="width: 600px; height: 400px;"><br></br>  
+            Код<br></br> 
+            <img src="code_6.5.png" style="width: 600px; height: 200px;"><br></br> 
+            Результат<br></br> 
+            <img src="res_6.5.png" style="width: 150px; height: 200px;">
+            <img src="res_6.5.1.png" style="width: 100px; height: 50px;">
+            `;}
+
+            else if (title === 'Завдання 6.7'){newContainer2.innerHTML = `
+            Завдання 6.7<br></br>
+            <img src="task_6.7.png" style="width: 600px; height: 400px;"><br></br>  
+            Код<br></br> 
+            <img src="code_6.7.png" style="width: 400px; height: 200px;"><br></br> 
+            Результат<br></br> 
+            <img src="res_6.7.png" style="width: 200px; height: 150px;"><br></br>
+            `;}
+
+            else if (title === 'Завдання 6.8'){newContainer2.innerHTML = `
+            Завдання 6.8<br></br>
+            <img src="task_6.8.png" style="width: 600px; height: 400px;"><br></br>  
+            Код<br></br> 
+            <img src="code_6.8.png" style="width: 400px; height: 350px;"><br></br> 
+            Результат<br></br> 
+            <img src="res_6.8.png" style="width: 200px; height: 20px;"><br></br>
+            `;}
+
+            else if (title === 'Завдання 6.9'){newContainer2.innerHTML = `
+            Завдання 6.9<br></br>
+            <img src="task_6.9.png" style="width: 600px; height: 400px;"><br></br>  
+            Код<br></br> 
+            <img src="code_6.9.png" style="width: 400px; height: 150px;"><br></br> 
+            Результат<br></br> 
+            <img src="res_6.9.png" style="width: 200px; height: 100px;"><br></br>
+            `;}
+
+            else if (title === 'Завдання 6.10'){newContainer2.innerHTML = `
+            Завдання 6.10<br></br>
+            <img src="task_6.10.png" style="width: 350px; height: 300px;"><br></br>  
+            Код<br></br> 
+            <img src="code_6.10.png" style="width: 350px; height: 300px;"><br></br> 
+            Результат<br></br> 
+            <img src="res_6.10.png" style="width: 250px; height: 250px;"><br></br>
+            `;}
+
+            else if (title === 'Висновки 6') {
+                newContainer2.innerHTML = 'У рамках лабораторної роботи №6 я було дослідила ООП-функціонал JS, використання callback та стрілочних функцій. Отримані знання було опрацьовано за допомиги практичних завдань.';
+            }
+
         }
     </script>    
 </body>
