@@ -134,6 +134,7 @@
         let lab5Clicked = false;
         let lab51Clicked = false;
         let lab6Clicked = false;
+        let lab7Clicked = false;
         function showLabContent(title) {
             const newContainer2 = document.getElementById('newContainer2');
             newContainer2.innerHTML = ''; // Очищення контейнера
@@ -158,6 +159,7 @@
                     lab5Clicked = false;
                     lab51Clicked = false;
                     lab6Clicked = false;
+                    lab7Clicked = false;
                 }
             } else if (title === 'Лабораторна робота №2') {
                 if (!lab2Clicked) {
@@ -182,6 +184,7 @@
                     lab5Clicked = false;
                     lab51Clicked = false;
                     lab6Clicked = false;
+                    lab7Clicked = false;
                 }
             }else if (title === 'Лабораторна робота №3') {
                 if (!lab3Clicked) {
@@ -230,6 +233,7 @@
                     lab5Clicked = false;
                     lab51Clicked = false;
                     lab6Clicked = false;
+                    lab7Clicked = false;
                 }
             } 
             else if (title === 'Лабораторна робота №5') {
@@ -255,6 +259,7 @@
                     lab5Clicked = true;
                     lab51Clicked = false;
                     lab6Clicked = false;
+                    lab7Clicked = false;
                 }
             } 
 
@@ -280,6 +285,7 @@
                     lab5Clicked = false;
                     lab51Clicked = true;
                     lab6Clicked = false;
+                    lab7Clicked = false;
                 }
             } 
             else if (title === 'Лабораторна робота №6') {
@@ -305,6 +311,28 @@
                     lab5Clicked = false;
                     lab51Clicked = false;
                     lab6Clicked = true;
+                    lab7Clicked = false;
+                }
+            } 
+            else if (title === 'Лабораторна робота №7') {
+                if (!lab3Clicked) {
+                    const labContent = document.getElementById('labContent');
+                    labContent.innerHTML = `
+                        <div class="in-container">
+                            <div class="in" onclick="showLabContent('Тема Мета ЛР №7 Місце розташування лаби, звіту')">Тема Мета ЛР №7 Місце розташування лаби, звіту</div>
+                            <div class="in" onclick="showLabContent('Завдання 7.1')">Завдання 7.1</div>  
+                            <div class="in" onclick="showLabContent('Завдання 7.2')">Завдання 7.2</div>  
+                            <div class="in" onclick="showLabContent('Висновки 7')">Висновки 7</div>
+                        </div>
+                    `;
+                    lab2Clicked = false;
+                    lab1Clicked = false;
+                    lab3Clicked = false;
+                    lab4Clicked = false;
+                    lab5Clicked = false;
+                    lab51Clicked = false;
+                    lab6Clicked = false;
+                    lab7Clicked = true;
                 }
             } 
             else if (title === 'Опис предметного середовища') {
@@ -809,10 +837,47 @@
             `;}
 
             else if (title === 'Висновки 6') {
-                newContainer2.innerHTML = 'У рамках лабораторної роботи №6 я було дослідила ООП-функціонал JS, використання callback та стрілочних функцій. Отримані знання було опрацьовано за допомиги практичних завдань.';
+                newContainer2.innerHTML = 'У рамках лабораторної роботи №6 я дослідила ООП-функціонал JS, використання callback та стрілочних функцій. Отримані знання було опрацьовано за допомиги практичних завдань.';
+            }
+
+            else if (title === 'Тема Мета ЛР №7 Місце розташування лаби, звіту'){newContainer2.innerHTML = `
+            Тема: WEB-СХОВИЩЕ. WEB STORAGE API. МОДУЛЬНОСТЬ  КОДУ. СТВОРЕННЯ МОДАЛЬНОГО ВІКНА. ДЕЛЕГУВАННЯ ПОДІЙ.<br> </br>
+            Мета: Ппридбати практичні навички роботи створення модального вікна; повторити процес створення макету, зокрема створення макету галереї довільних зображень; закріпити навички роботи з делегуванням подій.<br> </br>
+            Місце розташування Лабораторної роботи №6:
+            <a href="https://github.com/villenuevve/Lab_7">https://github.com/villenuevve/Lab_7</a> <br></br>
+            Жива сторінка лабораторної роботи №6:
+            <a href="https://villenuevve.github.io/Lab_7/">https://villenuevve.github.io/Lab_7/</a><br></br>
+            Місце розташування звіту:
+            <a href="https://github.com/villenuevve/Labs_report">https://github.com/villenuevve/Labs_report</a><br></br>
+            Жива сторінка звіту:
+            <a href="https://github.com/villenuevve.github.io/Labs_report/">https://github.com/villenuevve.github.io/Labs_report/</a>
+            `;} 
+
+            else if (title === 'Завдання 7.1'){newContainer2.innerHTML = `
+            Макет<br></br>
+            <img src="maket1.png" style="width: 200px; height: 300px;"><br></br>  
+            Фрагмент коду JS<br></br> 
+            <img src="code71.png" style="width: 300px; height: 250px;"><br></br> 
+            Результат<br></br> 
+            <img src="res71.png" style="width: 250px; height: 300px;"><br></br>
+            `;}
+
+            else if (title === 'Завдання 7.2'){newContainer2.innerHTML = `
+            Макет<br></br>
+            <img src="maket2.png" style="width: 500px; height: 300px;"><br></br>  
+            Фрагмент коду JS<br></br> 
+            <img src="code72.png" style="width: 400px; height: 300px;"><br></br> 
+            Результат<br></br> 
+            <img src="res72.png" style="width: 350px; height: 250px;"><br></br>
+            `;}
+
+            else if (title === 'Висновки 7') {
+                newContainer2.innerHTML = 'У рамках лабораторної роботи №7 я придбала практичні навички роботи створення модального вікна; повторила процес створення макету, зокрема створення макету галереї довільних зображень; закріпила навички роботи з делегуванням подій.';
             }
 
         }
     </script>    
 </body>
 </html>
+                            <div class="in" onclick="showLabContent('Завдання 7.1')">Завдання 7.1</div>  
+                            <div class="in" onclick="showLabContent('Завдання 7.2')">Завдання 7.2</div>  
