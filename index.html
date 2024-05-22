@@ -135,6 +135,8 @@
         let lab51Clicked = false;
         let lab6Clicked = false;
         let lab7Clicked = false;
+        let lab8Clicked = false;
+        let lab9Clicked = false;
         function showLabContent(title) {
             const newContainer2 = document.getElementById('newContainer2');
             newContainer2.innerHTML = ''; // Очищення контейнера
@@ -160,6 +162,8 @@
                     lab51Clicked = false;
                     lab6Clicked = false;
                     lab7Clicked = false;
+                    lab8Clicked = false;
+                    lab9Clicked = false;
                 }
             } else if (title === 'Лабораторна робота №2') {
                 if (!lab2Clicked) {
@@ -185,6 +189,8 @@
                     lab51Clicked = false;
                     lab6Clicked = false;
                     lab7Clicked = false;
+                    lab8Clicked = false;
+                    lab9Clicked = false;
                 }
             }else if (title === 'Лабораторна робота №3') {
                 if (!lab3Clicked) {
@@ -210,6 +216,8 @@
                     lab5Clicked = false;
                     lab51Clicked = false;
                     lab6Clicked = false;
+                    lab8Clicked = false;
+                    lab9Clicked = false;
                 }
             } 
             else if (title === 'Лабораторна робота №4') {
@@ -234,6 +242,8 @@
                     lab51Clicked = false;
                     lab6Clicked = false;
                     lab7Clicked = false;
+                    lab8Clicked = false;
+                    lab9Clicked = false;
                 }
             } 
             else if (title === 'Лабораторна робота №5') {
@@ -260,6 +270,8 @@
                     lab51Clicked = false;
                     lab6Clicked = false;
                     lab7Clicked = false;
+                    lab8Clicked = false;
+                    lab9Clicked = false;
                 }
             } 
 
@@ -286,6 +298,8 @@
                     lab51Clicked = true;
                     lab6Clicked = false;
                     lab7Clicked = false;
+                    lab8Clicked = false;
+                    lab9Clicked = false;
                 }
             } 
             else if (title === 'Лабораторна робота №6') {
@@ -312,6 +326,8 @@
                     lab51Clicked = false;
                     lab6Clicked = true;
                     lab7Clicked = false;
+                    lab8Clicked = false;
+                    lab9Clicked = false;
                 }
             } 
             else if (title === 'Лабораторна робота №7') {
@@ -333,6 +349,68 @@
                     lab51Clicked = false;
                     lab6Clicked = false;
                     lab7Clicked = true;
+                    lab8Clicked = false;
+                    lab9Clicked = false;
+                }
+            } 
+            else if (title === 'Лабораторна робота №8') {
+                if (!lab3Clicked) {
+                    const labContent = document.getElementById('labContent');
+                    labContent.innerHTML = `
+                        <div class="in-container">
+                            <div class="in" onclick="showLabContent('Тема лабораторної роботи 8, місце розташування звіту')">Тема лабораторної роботи 8, місце розташування звіту</div>
+                            <div class="in" onclick="showLabContent('Сертифікат 8')">Сертифікат 8</div>  
+                            <div class="in" onclick="showLabContent('Тест 8.1')">Тест 8.1</div>  
+                            <div class="in" onclick="showLabContent('Тест 8.2')">Тест 8.2</div>
+                            <div class="in" onclick="showLabContent('Тест 8.3')">Тест 8.3</div>
+                            <div class="in" onclick="showLabContent('Тест 8.4')">Тест 8.4</div>
+                            <div class="in" onclick="showLabContent('Тест 8.5')">Тест 8.5</div>
+                            <div class="in" onclick="showLabContent('Тест 8.6')">Тест 8.6</div>
+                            <div class="in" onclick="showLabContent('Тест 8.7')">Тест 8.7</div>
+                            <div class="in" onclick="showLabContent('Тест 8.8')">Тест 8.8</div>
+                            <div class="in" onclick="showLabContent('Висновки 8')">Висновки 8</div>
+                        </div>
+                    `;
+                    lab2Clicked = false;
+                    lab1Clicked = false;
+                    lab3Clicked = false;
+                    lab4Clicked = false;
+                    lab5Clicked = false;
+                    lab51Clicked = false;
+                    lab6Clicked = false;
+                    lab7Clicked = false;
+                    lab8Clicked = true;
+                    lab9Clicked = false;
+                }
+            } 
+            else if (title === 'Лабораторна робота №8') {
+                if (!lab3Clicked) {
+                    const labContent = document.getElementById('labContent');
+                    labContent.innerHTML = `
+                        <div class="in-container">
+                            <div class="in" onclick="showLabContent('Тема лабораторної роботи 9, місце розташування звіту')">Тема лабораторної роботи 8, місце розташування звіту</div>
+                            <div class="in" onclick="showLabContent('Сертифікат 9')">Сертифікат 9</div>  
+                            <div class="in" onclick="showLabContent('Тест 9.1')">Тест 9.1</div>  
+                            <div class="in" onclick="showLabContent('Тест 9.2')">Тест 9.2</div>
+                            <div class="in" onclick="showLabContent('Тест 9.3')">Тест 9.3</div>
+                            <div class="in" onclick="showLabContent('Тест 9.4')">Тест 9.4</div>
+                            <div class="in" onclick="showLabContent('Тест 9.5')">Тест 9.5</div>
+                            <div class="in" onclick="showLabContent('Тест 9.6')">Тест 9.6</div>
+                            <div class="in" onclick="showLabContent('Тест 9.7')">Тест 9.7</div>
+                            <div class="in" onclick="showLabContent('Тест 9.8')">Тест 9.8</div>
+                            <div class="in" onclick="showLabContent('Висновки 9')">Висновки 9</div>
+                        </div>
+                    `;
+                    lab2Clicked = false;
+                    lab1Clicked = false;
+                    lab3Clicked = false;
+                    lab4Clicked = false;
+                    lab5Clicked = false;
+                    lab51Clicked = false;
+                    lab6Clicked = false;
+                    lab7Clicked = false;
+                    lab8Clicked = false;
+                    lab9Clicked = true;
                 }
             } 
             else if (title === 'Опис предметного середовища') {
@@ -843,9 +921,9 @@
             else if (title === 'Тема Мета ЛР №7 Місце розташування лаби, звіту'){newContainer2.innerHTML = `
             Тема: WEB-СХОВИЩЕ. WEB STORAGE API. МОДУЛЬНОСТЬ  КОДУ. СТВОРЕННЯ МОДАЛЬНОГО ВІКНА. ДЕЛЕГУВАННЯ ПОДІЙ.<br> </br>
             Мета: Ппридбати практичні навички роботи створення модального вікна; повторити процес створення макету, зокрема створення макету галереї довільних зображень; закріпити навички роботи з делегуванням подій.<br> </br>
-            Місце розташування Лабораторної роботи №6:
+            Місце розташування Лабораторної роботи №7:
             <a href="https://github.com/villenuevve/Lab_7">https://github.com/villenuevve/Lab_7</a> <br></br>
-            Жива сторінка лабораторної роботи №6:
+            Жива сторінка лабораторної роботи №7:
             <a href="https://villenuevve.github.io/Lab_7/">https://villenuevve.github.io/Lab_7/</a><br></br>
             Місце розташування звіту:
             <a href="https://github.com/villenuevve/Labs_report">https://github.com/villenuevve/Labs_report</a><br></br>
