@@ -368,6 +368,7 @@
                             <div class="in" onclick="showLabContent('Тест 8.6')">Тест 8.6</div>
                             <div class="in" onclick="showLabContent('Тест 8.7')">Тест 8.7</div>
                             <div class="in" onclick="showLabContent('Тест 8.8')">Тест 8.8</div>
+                            <div class="in" onclick="showLabContent('Архів 8 завдання')">Архів 8 завдання</div>
                             <div class="in" onclick="showLabContent('Висновки 8')">Висновки 8</div>
                         </div>
                     `;
@@ -411,6 +412,7 @@
                             <div class="in" onclick="showLabContent('Тест 9.19')">Тест 9.19</div>
                             <div class="in" onclick="showLabContent('Тест 9.20')">Тест 9.20</div>
                             <div class="in" onclick="showLabContent('Тест 9.21')">Тест 9.21</div>
+                            <div class="in" onclick="showLabContent('Архів 9 завдання')">Архів 9 завдання</div>
                             <div class="in" onclick="showLabContent('Висновки 9')">Висновки 9</div>
                         </div>
                     `;
@@ -1074,6 +1076,10 @@
             <img src="test_8.8.4.png" style="width: 350px; height: 100px;"><br></br>  
             `;}
 
+            else if (title === 'Архів 8 завдання') {
+                newContainer2.innerHTML = `Final Assignment - Building a Node.js and MongoDB Web Application: <a href="react.zip" download>Завантажити архів 8</a>`;
+            }
+
             else if (title === 'Висновки 8') {
                 newContainer2.innerHTML = 'У рамках лабораторної роботи №8 я придбала теоретичні та практичні навички роботи створення інтерфейсів WEB-застосувань з використанням React';
             }
@@ -1222,6 +1228,10 @@
             <img src="res_9.21.4.png" style="width: 400px; height: 300px;"><br></br>  
             <img src="res_9.21.5.png" style="width: 400px; height: 300px;"><br></br>  
             `;}
+
+            else if (title === 'Архів 9 завдання') {
+                newContainer2.innerHTML = `Додаток-калькулятор: <a href="calculator.zip" download>Завантажити архів 9</a>`;
+            }
 
             else if (title === 'Висновки 9') {
                 newContainer2.innerHTML = 'У рамках лабораторної роботи №9 я придбала теоретичні та практичні навички роботи створення RESTful APIs застосунків з Node.js та Express';
